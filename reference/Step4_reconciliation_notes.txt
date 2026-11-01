@@ -1,0 +1,52 @@
+STEP 4 - LOCATION + TARGET RECONCILIATION NOTES
+generated 2026-10-30 01:21:44 | scan 800s
+
+CORRECTIONS APPLIED vs the earlier keyword-calibration:
+  1. Industry (L1/L2) now from the VALIDATED GCC-master mapping (Company_Master_List_industry.csv),
+     joined by exact L1/L2 name. The earlier run used a keyword classifier (approximate).
+  2. L1/L2 counts are DISTINCT uids per category (no cross-company double-count).
+  3. Delhi-NCR kept GROUPED: reported as ONE city line vs combined Gurugram+Noida+Delhi target
+     (combined city target 330,854); state folded into 'Delhi-NCR (grouped)' (target 330,854).
+  4. City coverage EXPANDED: Vadodara, Panaji & Goa, Udupi & Manipal, Aurangabad, Madurai,
+     Vijayawada, Mangaluru, Lucknow, Shillong, Belagavi, Guwahati, Hubballi & Dharwad, Tumakuru,
+     Shivamogga, Karwar now mapped (canon_city previously dropped them to blank).
+
+TARGETS ARE MINIMUM BENCHMARKS: ours >= target = OK (no action). ours < target = shortfall to explain.
+
+SHORTFALLS (ours < target) to investigate for genuine gaps vs missing companies:
+  [CITY] Bengaluru: 754,914 / 933,550 (81%)
+  [CITY] Hyderabad: 322,488 / 434,516 (74%)
+  [CITY] Chennai: 211,665 / 389,236 (54%)
+  [CITY] Pune: 303,620 / 311,227 (98%)
+  [CITY] Mumbai MMR: 229,405 / 292,107 (79%)
+  [CITY] Ahmedabad & GIFT City: 29,268 / 32,808 (89%)
+  [CITY] Coimbatore: 21,333 / 23,240 (92%)
+  [CITY] Shillong: 219 / 399 (55%)
+  [CITY] Karwar: 81 / 119 (68%)
+  [STATE] Karnataka: 767,603 / 936,807 (82%)
+  [STATE] Maharashtra: 545,016 / 607,034 (90%)
+  [STATE] Telangana: 322,488 / 434,516 (74%)
+  [STATE] Tamil Nadu: 237,057 / 413,115 (57%)
+  [STATE] Punjab / Haryana / UT: 0 / 4,133 (0%)
+  [STATE] Meghalaya: 219 / 399 (55%)
+  [L1] Industrial & Manufacturing: 286,084 / 339,260 (84%)
+  [L1] Consulting & Professional Services: 205,470 / 291,430 (71%)
+  [L1] Healthcare & Pharma: 196,767 / 268,318 (73%)
+  [L1] Retail & Consumer: 147,885 / 166,645 (89%)
+  [L1] Automotive & Mobility: 85,154 / 105,814 (80%)
+  [L1] Logistics & Supply Chain: 19,147 / 38,235 (50%)
+  [L2] Industrial Automation, Robotics & Heavy Machinery: 240,335 / 295,731 (81%)
+  [L2] Management Consulting, Strategy & Corporate Advisory: 177,640 / 265,849 (67%)
+  [L2] E-Commerce, Digital Marketplaces & Retail Tech: 117,015 / 140,916 (83%)
+  [L2] Automotive OEMs, Connected Mobility & Auto Components ER&D: 85,154 / 105,814 (80%)
+  [L2] Hospitals, Health Systems & Care Delivery Operations: 43,658 / 96,449 (45%)
+  [L2] Biopharmaceuticals, Therapeutics & Drug Discovery: 60,998 / 69,031 (88%)
+  [L2] Medical Devices, Diagnostic Equipment & Surgical Technologies: 30,133 / 57,647 (52%)
+  [L2] Logistics, Supply Chain & Freight Operations: 19,147 / 38,235 (50%)
+  [L2] Data Platforms, AI & Advanced Analytics: 22,797 / 23,101 (99%)
+  [L2] Specialty Chemicals, Advanced Materials & Mining: 11,066 / 20,497 (54%)
+  [L2] Cybersecurity & Identity Management: 12,829 / 15,720 (82%)
+  [L2] Cloud Infrastructure, DevOps & Developer Tools: 2,470 / 4,209 (59%)
+
+Unresolved own-city current uids: 472,008 (16.0%) - these sit in no target city;
+  mostly genuinely smaller towns outside the 34 benchmark cities (expected, India-wide pool).

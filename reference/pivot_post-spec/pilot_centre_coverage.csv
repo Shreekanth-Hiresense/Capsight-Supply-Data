@@ -1,0 +1,136 @@
+company,centre_city,master_headcount,our_current_mapped,coverage_pct,evidence
+Standard Chartered,Bengaluru,5501,7485,136.1,confirmed master centre
+Standard Chartered,Chennai,2497,7846,314.2,confirmed master centre
+Standard Chartered,Ahmedabad & GIFT City,717,102,14.2,confirmed master centre
+Standard Chartered,Mumbai MMR,628,2036,324.2,confirmed master centre
+Standard Chartered,Pune,565,251,44.4,confirmed master centre
+Standard Chartered,Delhi NCR,560,959,171.2,confirmed master centre
+Standard Chartered,Hyderabad,376,210,55.9,confirmed master centre
+Standard Chartered,Kolkata,355,243,68.5,confirmed master centre
+Standard Chartered,Bhubaneswar,,12,,profile-only (not a master centre)
+Standard Chartered,Chandigarh Tricity,,23,,profile-only (not a master centre)
+Standard Chartered,Coimbatore,,30,,profile-only (not a master centre)
+Standard Chartered,Indore,,35,,profile-only (not a master centre)
+Standard Chartered,Jaipur,,31,,profile-only (not a master centre)
+Standard Chartered,Kochi,,23,,profile-only (not a master centre)
+Standard Chartered,Madurai,,7,,profile-only (not a master centre)
+Standard Chartered,Mysuru,,4,,profile-only (not a master centre)
+Standard Chartered,Nagpur,,14,,profile-only (not a master centre)
+Standard Chartered,Thiruvananthapuram,,9,,profile-only (not a master centre)
+Standard Chartered,Tiruchirappalli,,5,,profile-only (not a master centre)
+Standard Chartered,UNLOCATED,,881,,no working location
+Standard Chartered,Vadodara,,16,,profile-only (not a master centre)
+Standard Chartered,Visakhapatnam,,1,,profile-only (not a master centre)
+Standard Chartered,TOTAL (all mapped current),11199,20223,180.6,
+
+Ford Motor Company,Chennai,4395,7242,164.8,confirmed master centre
+Ford Motor Company,Bengaluru,942,334,35.5,confirmed master centre
+Ford Motor Company,Coimbatore,533,240,45.0,confirmed master centre
+Ford Motor Company,Ahmedabad & GIFT City,,367,,profile-only (not a master centre)
+Ford Motor Company,Bhubaneswar,,3,,profile-only (not a master centre)
+Ford Motor Company,Chandigarh Tricity,,6,,profile-only (not a master centre)
+Ford Motor Company,Delhi NCR,,166,,profile-only (not a master centre)
+Ford Motor Company,Hyderabad,,77,,profile-only (not a master centre)
+Ford Motor Company,Indore,,12,,profile-only (not a master centre)
+Ford Motor Company,Jaipur,,9,,profile-only (not a master centre)
+Ford Motor Company,Kochi,,9,,profile-only (not a master centre)
+Ford Motor Company,Kolkata,,15,,profile-only (not a master centre)
+Ford Motor Company,Madurai,,11,,profile-only (not a master centre)
+Ford Motor Company,Mumbai MMR,,38,,profile-only (not a master centre)
+Ford Motor Company,Mysuru,,1,,profile-only (not a master centre)
+Ford Motor Company,Nagpur,,2,,profile-only (not a master centre)
+Ford Motor Company,Pune,,41,,profile-only (not a master centre)
+Ford Motor Company,Thiruvananthapuram,,4,,profile-only (not a master centre)
+Ford Motor Company,Tiruchirappalli,,8,,profile-only (not a master centre)
+Ford Motor Company,UNLOCATED,,815,,no working location
+Ford Motor Company,Vadodara,,7,,profile-only (not a master centre)
+Ford Motor Company,Visakhapatnam,,3,,profile-only (not a master centre)
+Ford Motor Company,TOTAL (all mapped current),5870,9410,160.3,
+
+Caterpillar,Bengaluru,2379,2445,102.8,confirmed master centre
+Caterpillar,Chennai,1780,3598,202.1,confirmed master centre
+Caterpillar,Ahmedabad & GIFT City,,2,,profile-only (not a master centre)
+Caterpillar,Bhubaneswar,,1,,profile-only (not a master centre)
+Caterpillar,Coimbatore,,82,,profile-only (not a master centre)
+Caterpillar,Delhi NCR,,25,,profile-only (not a master centre)
+Caterpillar,Hyderabad,,31,,profile-only (not a master centre)
+Caterpillar,Indore,,2,,profile-only (not a master centre)
+Caterpillar,Jaipur,,2,,profile-only (not a master centre)
+Caterpillar,Kochi,,9,,profile-only (not a master centre)
+Caterpillar,Kolkata,,13,,profile-only (not a master centre)
+Caterpillar,Madurai,,10,,profile-only (not a master centre)
+Caterpillar,Mumbai MMR,,16,,profile-only (not a master centre)
+Caterpillar,Mysuru,,7,,profile-only (not a master centre)
+Caterpillar,Nagpur,,8,,profile-only (not a master centre)
+Caterpillar,Pune,,68,,profile-only (not a master centre)
+Caterpillar,Thiruvananthapuram,,3,,profile-only (not a master centre)
+Caterpillar,Tiruchirappalli,,9,,profile-only (not a master centre)
+Caterpillar,UNLOCATED,,954,,no working location
+Caterpillar,Vadodara,,1,,profile-only (not a master centre)
+Caterpillar,Visakhapatnam,,5,,profile-only (not a master centre)
+Caterpillar,TOTAL (all mapped current),4159,7291,175.3,
+Caterpillar,!! master page not pulled: caterpillar-inc- (trailing dash),,,,coverage likely understated
+
+Target Corporation,Bengaluru,3724,5420,145.5,confirmed master centre
+Target Corporation,Chennai,,10,,profile-only (not a master centre)
+Target Corporation,Coimbatore,,3,,profile-only (not a master centre)
+Target Corporation,Delhi NCR,,75,,profile-only (not a master centre)
+Target Corporation,Hyderabad,,25,,profile-only (not a master centre)
+Target Corporation,Indore,,2,,profile-only (not a master centre)
+Target Corporation,Jaipur,,4,,profile-only (not a master centre)
+Target Corporation,Kochi,,4,,profile-only (not a master centre)
+Target Corporation,Kolkata,,3,,profile-only (not a master centre)
+Target Corporation,Madurai,,2,,profile-only (not a master centre)
+Target Corporation,Mumbai MMR,,14,,profile-only (not a master centre)
+Target Corporation,Mysuru,,10,,profile-only (not a master centre)
+Target Corporation,Nagpur,,3,,profile-only (not a master centre)
+Target Corporation,Pune,,9,,profile-only (not a master centre)
+Target Corporation,Thiruvananthapuram,,3,,profile-only (not a master centre)
+Target Corporation,UNLOCATED,,156,,no working location
+Target Corporation,Visakhapatnam,,2,,profile-only (not a master centre)
+Target Corporation,TOTAL (all mapped current),3724,5745,154.3,
+Target Corporation,!! master page not pulled: target-in-india,,,,coverage likely understated
+
+Zoho Corporation,Bengaluru,154,98,63.6,confirmed master centre
+Zoho Corporation,Bhubaneswar,,1,,profile-only (not a master centre)
+Zoho Corporation,Chandigarh Tricity,,1,,profile-only (not a master centre)
+Zoho Corporation,Chennai,,11146,,profile-only (not a master centre)
+Zoho Corporation,Coimbatore,,588,,profile-only (not a master centre)
+Zoho Corporation,Delhi NCR,,103,,profile-only (not a master centre)
+Zoho Corporation,Hyderabad,,66,,profile-only (not a master centre)
+Zoho Corporation,Indore,,1,,profile-only (not a master centre)
+Zoho Corporation,Jaipur,,3,,profile-only (not a master centre)
+Zoho Corporation,Kochi,,17,,profile-only (not a master centre)
+Zoho Corporation,Kolkata,,27,,profile-only (not a master centre)
+Zoho Corporation,Madurai,,415,,profile-only (not a master centre)
+Zoho Corporation,Mumbai MMR,,37,,profile-only (not a master centre)
+Zoho Corporation,Nagpur,,56,,profile-only (not a master centre)
+Zoho Corporation,Pune,,9,,profile-only (not a master centre)
+Zoho Corporation,Thiruvananthapuram,,10,,profile-only (not a master centre)
+Zoho Corporation,Tiruchirappalli,,90,,profile-only (not a master centre)
+Zoho Corporation,UNLOCATED,,1609,,no working location
+Zoho Corporation,Visakhapatnam,,1,,profile-only (not a master centre)
+Zoho Corporation,TOTAL (all mapped current),154,14278,9271.4,
+
+Omega Healthcare,Hyderabad,10074,711,7.1,confirmed master centre
+Omega Healthcare,Ahmedabad & GIFT City,,2,,profile-only (not a master centre)
+Omega Healthcare,Bengaluru,,1938,,profile-only (not a master centre)
+Omega Healthcare,Chandigarh Tricity,,1,,profile-only (not a master centre)
+Omega Healthcare,Chennai,,1892,,profile-only (not a master centre)
+Omega Healthcare,Coimbatore,,277,,profile-only (not a master centre)
+Omega Healthcare,Delhi NCR,,14,,profile-only (not a master centre)
+Omega Healthcare,Indore,,3,,profile-only (not a master centre)
+Omega Healthcare,Jaipur,,2,,profile-only (not a master centre)
+Omega Healthcare,Kochi,,3,,profile-only (not a master centre)
+Omega Healthcare,Madurai,,7,,profile-only (not a master centre)
+Omega Healthcare,Mumbai MMR,,505,,profile-only (not a master centre)
+Omega Healthcare,Mysuru,,8,,profile-only (not a master centre)
+Omega Healthcare,Nagpur,,5,,profile-only (not a master centre)
+Omega Healthcare,Pune,,102,,profile-only (not a master centre)
+Omega Healthcare,Thiruvananthapuram,,5,,profile-only (not a master centre)
+Omega Healthcare,Tiruchirappalli,,524,,profile-only (not a master centre)
+Omega Healthcare,UNLOCATED,,381,,no working location
+Omega Healthcare,Visakhapatnam,,5,,profile-only (not a master centre)
+Omega Healthcare,TOTAL (all mapped current),10074,6385,63.4,
+Omega Healthcare,!! master page not pulled: omega-healthcare,,,,coverage likely understated
+

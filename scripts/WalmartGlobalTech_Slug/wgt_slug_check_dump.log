@@ -1,0 +1,29 @@
+dump pools: ['ziplabs_passive_IN_20260827', 'ziplabs_passive_IN_20261012']  shards: 282  workers: 15
+  25/282 (27s)
+  50/282 (40s)
+  75/282 (45s)
+  100/282 (49s)
+  125/282 (51s)
+  150/282 (52s)
+  175/282 (53s)
+  200/282 (53s)
+  225/282 (53s)
+  250/282 (53s)
+  275/282 (53s)
+
+==== WALMART GLOBAL TECH slug check — WHOLE passive_IN DUMP  (53s) ====
+
+  walmartglobaltech:  PRESENT
+    distinct profiles        : 4,547
+    currently working here   : 2,090
+    worked here in the past  : 2,457
+
+  walmartglobaltechindia:  PRESENT
+    distinct profiles        : 16,777
+    currently working here   : 9,112
+    worked here in the past  : 7,665
+
+  COMBINED (either slug, distinct people):
+    distinct profiles        : 20,848
+    currently working        : 11,145
+    past only                : 9,703

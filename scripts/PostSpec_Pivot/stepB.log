@@ -1,0 +1,16 @@
+StepB scan: 850 inputs | slugs 4,674 | workers 10
+  100/850 | 1s
+  200/850 | 35s
+  300/850 | 112s
+  400/850 | 114s
+  500/850 | 155s
+  600/850 | 230s
+  700/850 | 233s
+  800/850 | 268s
+
+DECISIONS: {'keep': 4434, 'review_unclear': 140, 'empty(no profiles)': 95, 'suspected_pollution': 5}
+  suspected_pollution pages (dominant name = a DIFFERENT known company): profiles(approx) 1,681
+  review_unclear pages (name matches neither owner nor any known co): profiles(approx) 196,562
+-> C:\Users\LENOVO\AppData\Local\Temp\claude\C--Shree-Shreekanth-Hiresense-Jani-Capsight\5191e7de-04d0-4c6d-8a65-2f96d007dc0a\scratchpad\StepB_slug_decisions.csv
+-> C:\Users\LENOVO\AppData\Local\Temp\claude\C--Shree-Shreekanth-Hiresense-Jani-Capsight\5191e7de-04d0-4c6d-8a65-2f96d007dc0a\scratchpad\StepB_review_bucket.csv
+DONE 355s

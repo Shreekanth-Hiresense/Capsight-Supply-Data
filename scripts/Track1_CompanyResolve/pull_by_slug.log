@@ -1,0 +1,21 @@
+slugs: 2,393 | pools ['ziplabs_passive_IN_20260827', 'ziplabs_passive_IN_20261012']
+shards 282 | done 0 | to scan 282 | workers 15
+  scanned 20/282  new matches 1,968,455  (137s)
+  scanned 40/282  new matches 3,077,524  (192s)
+  scanned 60/282  new matches 3,643,116  (212s)
+  scanned 80/282  new matches 3,843,370  (222s)
+  scanned 100/282  new matches 3,946,366  (231s)
+  scanned 120/282  new matches 4,042,655  (238s)
+  scanned 140/282  new matches 4,128,790  (241s)
+  scanned 160/282  new matches 4,166,316  (244s)
+  scanned 180/282  new matches 4,189,914  (244s)
+  scanned 200/282  new matches 4,203,134  (245s)
+  scanned 220/282  new matches 4,210,893  (245s)
+  scanned 240/282  new matches 4,216,516  (245s)
+  scanned 260/282  new matches 4,219,166  (245s)
+  scanned 280/282  new matches 4,220,176  (245s)
+  scanned 282/282  new matches 4,220,229  (245s)
+
+==== PULL DONE (251s) ====
+  total matched profiles (all shards): 4,220,234
+  shards -> C:\Shree\Shreekanth-Hiresense\Jani Capsight\Track1_BySlug_profiles\shards

@@ -1,0 +1,48 @@
+slugs=['jpmorganchase', 'jpmorgan', 'lpl-financial', 'lpl-global-capability-center', 'goldman-sachs', 'goldman-sachs-investment-banking', 'goldman-sachs-assetmanagement', 'mastercard', 'mastercard-insights-intelligence']  shards=282 in C:\Shree\Shreekanth-Hiresense\Jani Capsight\Track1_BySlug_profiles\shards  workers=15
+
+==== SLUG CHECK on shards  (62s) ====
+
+  jpmorganchase:  PRESENT
+    distinct profiles (ever worked) : 94,225
+    currently working               : 47,975
+    worked in the past (not current): 46,250
+
+  jpmorgan:  PRESENT
+    distinct profiles (ever worked) : 21,777
+    currently working               : 6,567
+    worked in the past (not current): 15,210
+
+  lpl-financial:  PRESENT
+    distinct profiles (ever worked) : 155
+    currently working               : 50
+    worked in the past (not current): 105
+
+  lpl-global-capability-center:  PRESENT
+    distinct profiles (ever worked) : 168
+    currently working               : 166
+    worked in the past (not current): 2
+
+  goldman-sachs:  PRESENT
+    distinct profiles (ever worked) : 33,869
+    currently working               : 11,292
+    worked in the past (not current): 22,577
+
+  goldman-sachs-investment-banking:  NOT FOUND
+    distinct profiles (ever worked) : 0
+    currently working               : 0
+    worked in the past (not current): 0
+
+  goldman-sachs-assetmanagement:  PRESENT
+    distinct profiles (ever worked) : 1
+    currently working               : 0
+    worked in the past (not current): 1
+
+  mastercard:  PRESENT
+    distinct profiles (ever worked) : 14,811
+    currently working               : 9,114
+    worked in the past (not current): 5,697
+
+  mastercard-insights-intelligence:  PRESENT
+    distinct profiles (ever worked) : 293
+    currently working               : 103
+    worked in the past (not current): 190

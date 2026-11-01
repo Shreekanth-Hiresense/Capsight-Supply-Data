@@ -1,0 +1,31 @@
+
+============================================================
+[2026-10-28 21:51:02] TRACK-2 PART-2 full detail log
+============================================================
+INPUT: Downloads/Track2_Part2_Domestic_L3_Negation_v2 (1).xlsx; 1046 companies (639 none/pure-GCC, 408 negate); 24 distinct negate-L3 categories (col B).
+SCRIPTS (JD/Unspecified/Track2_Part2/scripts): resolve_entities.py, assemble_final_slugs.py, pull_by_slug.py, part2_negation.py; shared jani_rules.py.
+resolve: 282 shards/12w/172s -> part2_entity_review.csv (22,100 pairs; 948/1046 resolved).
+assemble -> final_slugs.csv (927 companies / 2,877 slugs).
+pull: 282 shards/14w/208s -> Jani Capsight/Track2_Part2_profiles/shards (2,665,988 profiles)+_sidecars.
+negation v2: conn>=20; interns excluded; match negate categories on JOB TITLE at that company only (v1 used headline+title -> college false-positives, fixed).
+PROTECT never-remove: GCC-named entity slug (technology/global/capability/gbs/rd/digital/shared-services/gic/gcc/innovation/eng-dev-centre) OR tech/RnD/analyst/finance/tax/ehs/brand/revenue-ops title. v2 dropped consultant from protect.
+city canon: Delhi-NCR=Delhi+Gurugram+Noida+Ghaziabad+Faridabad; Mumbai-MMR=Mumbai+Thane+NaviMumbai. small-N: India<CUTOFF(70,iterate)->largest city.
+EXCLUDE entirely: IBM, HP, NTT(=Track2 ntt-data, Vizag done), Bosch(full; BGSW+india parked), People Tech; + any company already in Track-1/Track-2 (5: Merck, Marelli, Lenovo, Arm, Elastic).
+LOC-only: Teleperformance=Hyderabad+Gurgaon; Siemens=Bengaluru/Chennai/Pune/DelhiNCR; Philips=Bengaluru/Chennai/DelhiNCR.
+OUTPUT: Jani Capsight/Track2_Part2_India_GCC_by_city.xlsx (Company|India total|Final location|People removed) + _negation_samples.csv. v1 India 2,064,452; after excludes 1,442,378; v2 running.
+[2026-10-28 22:04:29] DOCUMENTATION written: C:\Shree\Shreekanth-Hiresense\Jani Capsight\JANI_GCC_PIPELINE_DOCUMENTATION.md — authoritative full record of Track-1/Track-2/Track-2-Part-2 GCC pipeline (scripts, datasets, all curation rules, final numbers, gotchas). Read this first when reopening. Final counts: T1 2,797,023/1,517,960; T2 2,653,535/1,184,154; Part-2 1,237,980/498,767.
+[2026-10-28 22:30:45] MAX-3 ENTITY CAP applied to all 3 tracks (apply_top3_cap.py; top-3 pages/company by unique count, rest REMOVED not archived; exceptions KPMG/PwC/EY/Deloitte/Goldman/Amazon/DEShaw/PepsiCo/Mercedes/Bosch/Teleperformance/Siemens/Philips/NTT kept as-is). final_slugs backed up to final_slugs_precap_*.csv; shards_min20conn re-finalized. CAPPED counts: T1 ever 2,770,338/jani 1,507,329; T2 2,603,014/1,160,209; Part-2 India 1,184,276/current 477,175. Doc updated (section 8a).
+
+[2026-10-28 22:51:22] CALIBRATION CHECK (currently-working Jani, combined distinct across Track-1+Track-2+Part-2, dedup by uid).
+  Script: JD/_common/scripts/combined_current_by_city.py (847 shards: T1 min20conn 283 + T2 min20conn 282 + Part2 282; 10 workers; 345s). All per-track gates applied.
+  COMBINED currently-working distinct = 3,076,631 vs calibrated total 3,078,777 => 99.9% MATCH.
+  CITY (ours vs target, target Delhi-NCR=Delhi+Gurugram+Noida): Bengaluru 789,508/933,550 85%; Hyderabad 325,697/434,516 75%; Chennai 224,566/389,236 58%; Delhi-NCR 437,055/330,854 132%; Pune 314,284/311,227 101%; Mumbai-MMR 240,218/292,107 82%; Kolkata 42,306/41,192 103%; Ahmedabad 31,217/32,808 95%; Coimbatore 22,927/23,240 99%; Kochi 8,049/9,935 81%; Trivandrum 12,760/7,581 168%; Jaipur 15,975/6,525 245%; Indore 15,034/5,970 252%; Chandigarh 13,516/4,133 327%; Nagpur 8,715/2,978 293%; Visakhapatnam 5,440/2,846 191%; Mysuru 5,572/902 618%; unknown-city 559,649 (unallocated).
+  STATE: Karnataka 795,080/936,807 85%; Maharashtra 563,217/607,034 93%; Telangana 325,697/434,516 75%; Tamil Nadu 247,493/413,115 60%; Gujarat 31,217/43,095 72%; West Bengal 42,306/41,192 103%; Kerala 20,809/17,516 119%; Rajasthan 15,975/6,525 245%; MP 15,034/5,970 252%; AP 5,440/3,380 161%; Odisha 4,143/3,243 128%.
+  Verdict: grand total matches (99.9%); metros read UNDER mainly due to 559,649 unparseable-city profiles (unallocated); small cities read OVER because profile-city != GCC work-city. Full table: Jani Capsight/Calibration_match_city_state.csv.
+  L1/L2 sector tables: NOT yet matched - need company->sector classification from the user-provided definitions (next step). MATCHED metric = currently-working Jani.
+
+[2026-10-28 22:55:06] COMPANY COVERAGE audit. Analyzed(in final_slugs): Track-1 950/983, Track-2 593/595, Part-2 927/1047 (~2,470 slots, ~2,460 distinct).
+  NOT analyzed = 155 total = 14 excluded-on-purpose + 141 no-LinkedIn-page-found(name-match miss). Full list: Jani Capsight/NOT_analyzed_companies.csv (track,company,reason).
+  Excluded: T1 ION,IGT,ING,EQ,Azul,CR2,NBTC,GoTo,Sankalp; T2 Kyndryl; P2 IBM,HP,NTT,Bosch,People Tech (+5 Track1/2 overlaps).
+  NOTE: no-page-found = name-resolver miss, not necessarily absent. Many exist under a differently-named slug (LSEG=london-stock-exchange-group, Pinterest India=pinterest, Dentsu, Mitsubishi UFJ, Databricks, Atlassian, CrowdStrike, DocuSign, etc.) and can be added via URL like D.E.Shaw/Bosch. Part-2 no-page are mostly GCC-named sub-entities with no own page (people on parent page).
+  OPEN / TO CONTINUE LATER: (1) optionally auto-discover LinkedIn pages for the 141 no-page companies and add the real ones; (2) L1/L2 SECTOR classification (map each company to sector via user-provided canonical definitions) + compare to calibrated sector targets (currently-working Jani). City/State calibration already done (99.9% grand-total match).

@@ -1,0 +1,72 @@
+NAMEQ=('jpmorgan', 'j p morgan', 'morgan chase') DOMAINQ=('jpmorgan',)  company shards=240  workers=15
+  40/240 matched so far 23 (17s)
+  80/240 matched so far 59 (49s)
+  120/240 matched so far 86 (61s)
+  160/240 matched so far 117 (80s)
+  200/240 matched so far 155 (101s)
+  240/240 matched so far 195 (127s)
+
+==== COMPANIES RESOLVE  (127s) ====
+  raw matches 195 -> distinct entities 195  -> C:\Shree\Shreekanth-Hiresense\JD AI Workflow\JD\Unspecified\Track1_CompanyResolve\companies_jpmorgan_candidates.csv
+
+  distinct entities (name | slug | website | country):
+    A) Jpmorgan Services India Private Limited    | a-jpmorgan-services-india-pr |                          | IN
+    Banco J.P. Morgan S.A. Institucion de Banca M | banco-j.p.-morgan-s.a.-insti |                          | 
+    J P Morgan Services Inc                       | j-p-morgan-services-inc      |                          | US
+    J P Morgan Services India Private Limited, Mu | j-p-morgan-services-india-pr |                          | IN
+    J. P. MORGAN ADVISORS INDIA PRIVATE LIMITED   | j.-p.-morgan-advisors-india- |                          | IN
+    J.P. MORGAN 8CS INVESTMENTS (GP) LIMITED      | j.p.-morgan-8cs-investments- |                          | GB
+    J.P. MORGAN ASSET MANAGEMENT REAL ESTATE FRAN | j.p.-morgan-asset-management |                          | FR
+    J.P. MORGAN CHASE NATIONAL CORPORATE SERVICES | j.p.-morgan-chase-national-c |                          | US
+    J.P. MORGAN ENERGY TRADING HOLDINGS LTD       | j.p.-morgan-energy-trading-h |                          | GB
+    J.P. MORGAN FINANCE (FRANCE)                  | j.p.-morgan-finance-france-  |                          | FR
+    J.P. MORGAN FSB                               | j.p.-morgan-fsb              |                          | US
+    J.P. MORGAN MORTGAGE CAPITAL INC.             | j.p.-morgan-mortgage-capital |                          | US
+    J.P. MORGAN PRIVATE FUND MANAGEMENT LIMITED   | j.p.-morgan-private-fund-man |                          | GB
+    J.P. MORGAN SECRETARIES (UK) LIMITED          | j.p.-morgan-secretaries-uk-l |                          | GB
+    J.P. Morgan (I) Private Limited.              | j.p.-morgan-i-private-limite |                          | IN
+    J.P. Morgan (Suisse) SA                       | j.p.-morgan-suisse-sa        |                          | CH
+    J.P. Morgan Acceptance Corp II                | j.p.-morgan-acceptance-corp- |                          | US
+    J.P. Morgan Administrative Services Australia | j.p.-morgan-administrative-s |                          | 
+    J.P. Morgan Advisors India Private Ltd        | j.p.-morgan-advisors-india-p |                          | 
+    J.P. Morgan Asia Ex Japan Fund LLC            | j.p.-morgan-asia-ex-japan-fu |                          | US
+    J.P. Morgan Asian Infrastructure & Related Re | j.p.-morgan-asian-infrastruc |                          | US
+    J.P. Morgan Australia Group Pty Limited       | j.p.-morgan-australia-group- |                          | AU
+    J.P. Morgan Broker Dealer Holdings Inc        | j.p.-morgan-broker-dealer-ho |                          | 
+    J.P. Morgan Capital Holdings Ltd              | j.p.-morgan-capital-holdings |                          | 
+    J.P. Morgan China Private Equity Fund LP      | j.p.-morgan-china-private-eq |                          | CN
+    J.P. Morgan Co Invest Partners 2001 B 2 LP    | j.p.-morgan-co-invest-partne |                          | US
+    J.P. Morgan Commercial Banking                | j.p.-morgan-commercial-banki |                          | US
+    J.P. Morgan Commercial Mortgage Investment Co | j.p.-morgan-commercial-mortg |                          | 
+    J.P. Morgan Corretora de Câmbio e Valores Mob | j.p.-morgan-corretora-de-c%c |                          | BR
+    J.P. Morgan Energy Trading Holdings Sarl      | j.p.-morgan-energy-trading-h |                          | CH
+    J.P. Morgan Espana S.A.                       | j.p.-morgan-espana-s.a.      |                          | ES
+    J.P. Morgan Finance Holdings (Japan) LLC      | j.p.-morgan-finance-holdings |                          | 
+    J.P. Morgan Financial Services New Zealand Lt | j.p.-morgan-financial-servic |                          | 
+    J.P. Morgan Fleming Asset Management (Asia) I | j.p.-morgan-fleming-asset-ma |                          | 
+    J.P. Morgan Fleming Asset Management (London) | j.p.-morgan-fleming-asset-ma |                          | 
+    J.P. Morgan Fleming Asset Management (Schweiz | j.p.-morgan-fleming-asset-ma |                          | 
+    J.P. Morgan Fleming Asset Management France S | j.p.-morgan-fleming-asset-ma |                          | 
+    J.P. Morgan Fleming Marketing Ltd             | j.p.-morgan-fleming-marketin |                          | 
+    J.P. Morgan Fleming Sélection                 | j.p.-morgan-fleming-s%c3%a9l |                          | FR
+    J.P. Morgan GMIF (GP) Ltd                     | j.p.-morgan-gmif-gp-ltd      |                          | 
+    J.P. Morgan Holdings (UK) Ltd                 | j.p.-morgan-holdings-uk-ltd  |                          | 
+    J.P. Morgan Holdings Australia Ltd            | j.p.-morgan-holdings-austral |                          | 
+    J.P. Morgan India Property Fund II LP         | j.p.-morgan-india-property-f |                          | US
+    J.P. Morgan Institutional Services Australia  | j.p.-morgan-institutional-se |                          | 
+    J.P. Morgan Insurance Holdings LLC            | j.p.-morgan-insurance-holdin |                          | US
+    J.P. Morgan International Bank Limited Frankf | j.p.-morgan-international-ba |                          | DE
+    J.P. Morgan International Finance Limited     | j.p.-morgan-international-fi |                          | US
+    J.P. Morgan Leveraged Loans Master Fund LP    | j.p.-morgan-leveraged-loans- |                          | US
+    J.P. Morgan Markets Ltd                       | j.p.-morgan-markets-ltd      |                          | 
+    J.P. Morgan Operations Australia Limited      | j.p.-morgan-operations-austr |                          | AU
+    J.P. Morgan Research Total Return Fund LLC    | j.p.-morgan-research-total-r |                          | US
+    J.P. Morgan S.A. Distribuidora de Títulos e V | j.p.-morgan-s.a.-distribuido |                          | BR
+    J.P. Morgan SA Correctora de Cambio e Valores | j.p.-morgan-sa-correctora-de |                          | 
+    J.P. Morgan SIG Holdings (Spain) SL           | j.p.-morgan-sig-holdings-spa |                          | 
+    J.P. Morgan Scotland (Services) Ltd           | j.p.-morgan-scotland-service |                          | 
+    J.P. Morgan Taxable PUTTERs/Taxable DRIVERs S | j.p.-morgan-taxable-putters- |                          | US
+    J.P. Morgan Taxable PUTTERs/Taxable DRIVERs S | j.p.-morgan-taxable-putters- |                          | US
+    J.P. Morgan Taxable PUTTERs/Taxable DRIVERs S | j.p.-morgan-taxable-putters- |                          | US
+    JP MORGAN CHASE NATIONAL CORPORATE SERVICES I | jp-morgan-chase-national-cor |                          | US
+    JPMORGAN ASSET MANAGEMENT EUROPE SARL SUCURSA | jpmorgan-asset-management-eu |                          | ES

@@ -1,0 +1,19 @@
+targets 983 | pools ['ziplabs_passive_IN_20260827', 'ziplabs_passive_IN_20261012']
+shards 282 | done 2 | to scan 280 | workers 15
+  scanned 20/280 (102s)
+  scanned 40/280 (140s)
+  scanned 60/280 (164s)
+  scanned 80/280 (179s)
+  scanned 100/280 (192s)
+  scanned 120/280 (197s)
+  scanned 140/280 (201s)
+  scanned 160/280 (202s)
+  scanned 180/280 (203s)
+  scanned 200/280 (203s)
+  scanned 220/280 (203s)
+  scanned 240/280 (203s)
+  scanned 260/280 (203s)
+  scanned 280/280 (203s)
+
+==== RESOLVE DONE (212s) ====
+  distinct (target,slug) pairs: 20,404  -> C:\Shree\Shreekanth-Hiresense\JD AI Workflow\JD\Unspecified\Track1_CompanyResolve\track1_entity_review.csv

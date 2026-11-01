@@ -1,0 +1,19 @@
+slugs=['jpmorganchase']  pools=['ziplabs_passive_IN_20260827', 'ziplabs_passive_IN_20261012']  shards=282  workers=15
+  25/282 (67s)
+  50/282 (79s)
+  75/282 (84s)
+  100/282 (87s)
+  125/282 (89s)
+  150/282 (91s)
+  175/282 (91s)
+  200/282 (91s)
+  225/282 (91s)
+  250/282 (91s)
+  275/282 (91s)
+
+==== SLUG CHECK (whole passive_IN dump)  (91s) ====
+
+  jpmorganchase:  PRESENT
+    distinct profiles (ever worked) : 94,225
+    currently working               : 47,975
+    worked in the past (not current): 46,250

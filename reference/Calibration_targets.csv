@@ -1,0 +1,93 @@
+level,name,parent_or_region,enterprises,calibrated_talent
+L1,BFSI,,304,670095
+L1,Software & Internet,,814,658027
+L1,Industrial & Manufacturing,,396,339260
+L1,Consulting & Professional Services,,265,291430
+L1,Healthcare & Pharma,,183,268318
+L1,Retail & Consumer,,183,166645
+L1,Semiconductors & Electronics,,79,107622
+L1,Automotive & Mobility,,82,105814
+L1,Telecom & Media,,69,102223
+L1,Energy & Utilities,,56,61428
+L1,Logistics & Supply Chain,,26,38235
+L1,Aerospace & Defense,,21,27638
+L1,Education & EdTech,,22,13265
+L2,"Enterprise Software, SaaS & Digital Platforms",Software & Internet,722,614997
+L2,"Banking, Capital Markets & FinTech",BFSI,228,433315
+L2,"Industrial Automation, Robotics & Heavy Machinery",Industrial & Manufacturing,356,295731
+L2,"Management Consulting, Strategy & Corporate Advisory",Consulting & Professional Services,239,265849
+L2,"Financial Advisory, Asset & Wealth Management, Ratings & Market Intelligence",BFSI,37,211816
+L2,"E-Commerce, Digital Marketplaces & Retail Tech",Retail & Consumer,152,140916
+L2,Semiconductor Fabless & Silicon VLSI Design,Semiconductors & Electronics,79,107622
+L2,"Automotive OEMs, Connected Mobility & Auto Components ER&D",Automotive & Mobility,82,105814
+L2,"Hospitals, Health Systems & Care Delivery Operations",Healthcare & Pharma,31,96449
+L2,Telecom Networks & Communications Infrastructure,Telecom & Media,49,80465
+L2,"Biopharmaceuticals, Therapeutics & Drug Discovery",Healthcare & Pharma,54,69031
+L2,"Oil, Gas, Petrochemicals & Power Utilities",Energy & Utilities,56,61428
+L2,"Medical Devices, Diagnostic Equipment & Surgical Technologies",Healthcare & Pharma,45,57647
+L2,"Life Sciences Tools, Genomics & Clinical Research (CRO)",Healthcare & Pharma,53,45191
+L2,"Logistics, Supply Chain & Freight Operations",Logistics & Supply Chain,26,38235
+L2,"Commercial Aviation, Aerospace Systems & Defense",Aerospace & Defense,21,27638
+L2,"Travel, Hospitality & Leisure Platforms",Retail & Consumer,31,25729
+L2,"Human Capital Management, Talent Solutions & HR Technology",Consulting & Professional Services,26,25581
+L2,"Insurance, Reinsurance & Actuarial",BFSI,39,24964
+L2,"Data Platforms, AI & Advanced Analytics",Software & Internet,42,23101
+L2,Construction Technology & Real Estate Services,Industrial & Manufacturing,13,23032
+L2,"Digital Media, Gaming, Advertising & Publishing",Telecom & Media,20,21758
+L2,"Specialty Chemicals, Advanced Materials & Mining",Industrial & Manufacturing,27,20497
+L2,Cybersecurity & Identity Management,Software & Internet,29,15720
+L2,Education Technology & Digital Learning,Education & EdTech,22,13265
+L2,"Cloud Infrastructure, DevOps & Developer Tools",Software & Internet,21,4209
+STATE,Karnataka,,1300,936807
+STATE,Maharashtra,,971,607034
+STATE,Telangana,,567,434516
+STATE,Tamil Nadu,,543,413115
+STATE,Haryana,,366,209001
+STATE,Uttar Pradesh,,245,82295
+STATE,Gujarat,,147,43095
+STATE,West Bengal,,81,41192
+STATE,NCT of Delhi,,75,40028
+STATE,Kerala,,56,17516
+STATE,Rajasthan,,22,6525
+STATE,Madhya Pradesh,,19,5970
+STATE,Punjab / Haryana / UT,,17,4133
+STATE,Andhra Pradesh,,12,3380
+STATE,Odisha,,10,3243
+STATE,Goa,,3,1482
+STATE,Meghalaya,,3,399
+STATE,Assam,,2,269
+CITY,Bengaluru,Karnataka,1281,933550
+CITY,Hyderabad,Telangana,567,434516
+CITY,Chennai,Tamil Nadu,464,389236
+CITY,Pune,Maharashtra,543,311227
+CITY,Mumbai MMR,Maharashtra,415,292107
+CITY,Gurugram,Haryana,366,209001
+CITY,Noida,Uttar Pradesh,242,81825
+CITY,Kolkata,West Bengal,81,41192
+CITY,Delhi,NCT of Delhi,75,40028
+CITY,Ahmedabad & GIFT City,Gujarat,105,32808
+CITY,Coimbatore,Tamil Nadu,75,23240
+CITY,Vadodara,Gujarat,42,10287
+CITY,Kochi,Kerala,35,9935
+CITY,Thiruvananthapuram,Kerala,21,7581
+CITY,Jaipur,Rajasthan,22,6525
+CITY,Indore,Madhya Pradesh,19,5970
+CITY,Chandigarh Tricity,Punjab / Haryana / UT,17,4133
+CITY,Bhubaneswar,Odisha,10,3243
+CITY,Nagpur,Maharashtra,8,2978
+CITY,Visakhapatnam,Andhra Pradesh,9,2846
+CITY,Panaji & Goa,Goa,3,1482
+CITY,Mysuru,Karnataka,7,902
+CITY,Udupi & Manipal,Karnataka,2,771
+CITY,Chhatrapati Sambhaji Nagar (Aurangabad),Maharashtra,5,722
+CITY,Madurai,Tamil Nadu,4,639
+CITY,Vijayawada,Andhra Pradesh,3,534
+CITY,Mangaluru,Karnataka,4,510
+CITY,Lucknow,Uttar Pradesh,3,470
+CITY,Shillong,Meghalaya,3,399
+CITY,Belagavi,Karnataka,1,296
+CITY,Guwahati,Assam,2,269
+CITY,Hubballi & Dharwad,Karnataka,2,244
+CITY,Tumakuru (Tumkur),Karnataka,1,237
+CITY,Shivamogga,Karnataka,1,178
+CITY,Karwar,Karnataka,1,119

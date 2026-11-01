@@ -1,0 +1,104 @@
+HUB current Amazon pool (the 85k)   : 85,420
+  matched to an L3 role             : 18,954 (22.2%)
+  unmatched current title           : 66,463 (77.8%)
+  no current title                  : 3
+
+==== L1 breakdown (matched) ====
+    7,387   Technology & Engineering
+    2,351   Commercial & Marketing
+    2,349   Legal, Risk & Compliance
+    1,778   Data & Artificial Intelligence
+    1,428   Operations, Supply Chain & Manufacturing
+    1,357   Finance & Accounting
+      836   People & Human Resources
+      761   Product, Design & Customer Experience
+      282   Software Engineering & Development
+      192   Cloud, Infrastructure & Platform Engineering
+      145   Customer Success & Support
+       67   Sales, Marketing & Growth
+       21   Legal & Compliance
+
+==== L3 breakdown (pool matched vs Amazon JSON target), sorted by pool ====
+   3,335   (json target  1,668)   [Technology & Engineering > Application Development]  Technical Program Management (TPM)
+   2,351   (json target  1,977)   [Commercial & Marketing > Category Management]  Category Assortment Merchandising
+   2,349   (json target    507)   [Legal, Risk & Compliance > Compliance & Regulatory]  Regulatory Compliance
+   1,489   (json target  3,831)   [Technology & Engineering > Application Development]  Software Quality Testing Automation
+   1,428   (json target  1,050)   [Operations, Supply Chain & Manufacturing > Operations Management]  Logistics & Freight Operations
+   1,410   (json target    680)   [Technology & Engineering > Application Development]  Fulfillment & Distribution Network Operations
+     724   (json target  1,829)   [People & Human Resources > People Operations]  Talent Acquisition & Sourcing
+     724   (json target  1,854)   [Finance & Accounting > FP&A]  FP&A Commercial Forecasting
+     712   (json target  1,483)   [Data & Artificial Intelligence > Data Engineering, Analytics & Platforms]  Data Visualization Development
+     699   (json target  1,421)   [Product, Design & Customer Experience > Product Management]  Technical Product Management
+     633   (json target  1,359)   [Finance & Accounting > Controllership]  Accounting Global Controllership
+     624   (json target  3,460)   [Data & Artificial Intelligence > Data Engineering, Analytics & Platforms]  Data Engineering
+     428   (json target  2,966)   [Data & Artificial Intelligence > AI, Machine Learning & Data Science]  Machine Learning Engineering
+     354   (json target  1,112)   [Technology & Engineering > Application Development]  AI Solutions Architecture
+     192   (json target  5,190)   [Software Engineering & Development > Application Development]  Frontend Development
+     182   (json target  6,055)   [Cloud, Infrastructure & Platform Engineering > Platform, DevOps & Reliability Engineering]  DevOps Engineering
+     173   (json target    927)   [Technology & Engineering > Application Development]  Business Strategy Operations
+     133   (json target    618)   [Technology & Engineering > Application Development]  Procurement Strategic Sourcing
+     120   (json target  5,932)   [Technology & Engineering > Application Development]  Cloud Engineering Architecture
+      97   (json target    568)   [People & Human Resources > HR Business Partnership]  HRBP
+      80   (json target  3,015)   [Technology & Engineering > Application Development]  Security Engineering (AppSec)
+      69   (json target    741)   [Technology & Engineering > Application Development]  HR Operations & Global Mobility
+      67   (json target    470)   [Sales, Marketing & Growth > Marketing]  Pricing Analytics
+      66   (json target    297)   [Technology & Engineering > Application Development]  Cloud Support Engineering (CSE)
+      62   (json target    556)   [Product, Design & Customer Experience > User Experience & Design]  Product Design
+      57   (json target    185)   [Customer Success & Support > Customer Success]  Technical Account Management
+      57   (json target     99)   [Customer Success & Support > Customer Success]  Customer Success Management
+      46   (json target    989)   [Technology & Engineering > Embedded & Systems Software]  Warehouse Robotics Software Engineering
+      43   (json target  1,483)   [Technology & Engineering > Application Development]  Inventory & Asset Optimization Engineering
+      40   (json target     43)   [Technology & Engineering > Application Development]  Strategic Workforce Planning & Capacity Modeling
+      35   (json target 20,019)   [Software Engineering & Development > Application Development]  Java Backend Engineering
+      34   (json target  4,202)   [Software Engineering & Development > Application Development]  Full Stack Engineering
+      31   (json target    112)   [Customer Success & Support > Customer Support]  Customer Experience Analytics & Quality
+      21   (json target  2,224)   [Software Engineering & Development > Application Development]  Python Backend Engineering
+      21   (json target    296)   [Legal & Compliance > Intellectual Property]  Technology Contracts & IP Management
+      14   (json target    222)   [People & Human Resources > People Operations]  Compensation & Benefits
+      14   (json target  5,437)   [Data & Artificial Intelligence > Data Engineering, Analytics & Platforms]  Cloud Data Platform Engineering
+      11   (json target  2,595)   [Technology & Engineering > Application Development]  Supply Chain Demand Planning
+       9   (json target  3,584)   [Cloud, Infrastructure & Platform Engineering > Platform, DevOps & Reliability Engineering]  Site Reliability Engineering
+       9   (json target    372)   [Technology & Engineering > Application Development]  Customs & Trade Compliance Operations
+       7   (json target  1,359)   [Technology & Engineering > AI & Machine Learning]  Search & Recommendation Engine
+       1   (json target     87)   [People & Human Resources > People Analytics]  People Analytics
+       1   (json target  2,472)   [Cloud, Infrastructure & Platform Engineering > Platform, DevOps & Reliability Engineering]  Platform Engineering
+       1   (json target  1,854)   [Technology & Engineering > Application Development]  NLP & Language Model Engineering
+       1   (json target    334)   [Technology & Engineering > Application Development]  Marketing Analytics Attribution
+
+==== L3 roles with ZERO matches in pool ====
+  0   (json target  1,112)   Supply & Materials Requirements Planning (MRP)
+  0   (json target    556)   Marketing Mix Modeling
+  0   (json target    494)   Procurement Category Management
+  0   (json target     31)   Talent Intelligence & Labor Market Research
+
+==== TOP 30 UNMATCHED titles ====
+   1,759  associate
+   1,663  software engineer
+   1,519  software development engineer
+   1,089  quality specialist
+     996  account manager
+     842  sde
+     841  software development engineer 2
+     817  investigations specialist
+     797  assistant
+     764  ml data associate
+     748  sde 2
+     735  software development engineer ii
+     654  senior associate
+     623  business analyst
+     571  transaction risk investigator
+     564  software development manager
+     521  quality analyst
+     514  software developer
+     441  quality associate
+     435  investigation specialist
+     415  customer service representative
+     413  team lead
+     410  assistant manager
+     394  customer service associate
+     370  data analyst
+     345  manager
+     339  sde ii
+     329  data associate
+     325  senior software engineer
+     325  team manager

@@ -1,0 +1,22 @@
+scanning 48 shards, 15 workers, slugs=['walmartglobaltech', 'walmartglobaltechindia']
+  10/48 (28s)
+  20/48 (43s)
+  30/48 (43s)
+  40/48 (59s)
+
+==== WALMART GLOBAL TECH slug check  (67s) ====
+
+  walmartglobaltech:  PRESENT
+    distinct profiles        : 4,546
+    currently working here   : 2,089
+    worked here in the past  : 2,457
+
+  walmartglobaltechindia:  PRESENT
+    distinct profiles        : 16,730
+    currently working here   : 9,107
+    worked here in the past  : 7,623
+
+  COMBINED (either slug, distinct people):
+    distinct profiles        : 20,800
+    currently working        : 11,139
+    past only                : 9,661

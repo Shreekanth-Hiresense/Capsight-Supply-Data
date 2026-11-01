@@ -1,0 +1,19 @@
+pilot scan: 850 inputs | workers 10
+  100/850 | 1s
+  200/850 | 28s
+  300/850 | 92s
+  400/850 | 94s
+  500/850 | 129s
+  600/850 | 192s
+  700/850 | 195s
+  800/850 | 228s
+
+WORKING-LOCATION SOURCE (keep slugs, current):
+  Standard Chartered     role-loc 17,188 (71%) | profile-loc  5,842 | none 1,011 | total 24,041
+  Ford Motor Company     role-loc  7,629 (70%) | profile-loc  2,441 | none   903 | total 10,973
+  Caterpillar            role-loc  5,583 (64%) | profile-loc  2,064 | none 1,066 | total 8,713
+  Target Corporation     role-loc  5,615 (71%) | profile-loc  2,045 | none   196 | total 7,856
+  Zoho Corporation       role-loc 10,948 (69%) | profile-loc  3,153 | none 1,722 | total 15,823
+  Omega Healthcare       role-loc  5,387 (73%) | profile-loc  1,527 | none   424 | total 7,338
+
+DONE 341s -> C:\Users\LENOVO\AppData\Local\Temp\claude\C--Shree-Shreekanth-Hiresense-Jani-Capsight\5191e7de-04d0-4c6d-8a65-2f96d007dc0a\scratchpad\pilot_centre_coverage.csv ; C:\Users\LENOVO\AppData\Local\Temp\claude\C--Shree-Shreekanth-Hiresense-Jani-Capsight\5191e7de-04d0-4c6d-8a65-2f96d007dc0a\scratchpad\pilot_slug_validation.csv

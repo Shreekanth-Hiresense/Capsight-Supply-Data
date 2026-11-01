@@ -1,0 +1,48 @@
+[2026-10-28 15:33:40] USER: new excel in Downloads 'Track2_Confirmed_GCC_Locations_pART 1.xlsx' (company names) - get those companies too, same pipeline as Track-1.
+[2026-10-28 15:33:40] SYSTEM: Track2 excel = 1 sheet 'High confidence only', 596 names (col 'Company Name'), all distinct, ZERO overlap with Track-1 (984). 595 distinct after norm.
+[2026-10-28 15:33:40] SYSTEM: Wrote C:\Shree\Shreekanth-Hiresense\JD AI Workflow\JD\Unspecified\Track2_CompanyResolve\scriptsesolve_entities.py (adapted from Track-1). Smoke test LIMIT_FILES=2 OK (72s, 4,796 pairs). Launched full resolve over 282 passive_IN shards (15 workers, resumable) -> track2_entity_review.csv. Next: build_confirmed_slugs -> pull_by_slug (gzip shards, all orig cols, to Jani Capsight\Track2_BySlug_profiles).
+[2026-10-28 15:49:35] SYSTEM: Track2 resolve done (318s) = 20,427 (target,slug) pairs. build_confirmed: 570 auto-confirmed / 24 flagged (18 correct name-variants, ~6 undercounted: Maersk/MercedesBenz/NTTDATA/Sony; GSK/Lenovo slug correct). assemble_final_slugs: 594 companies / 2,069 slugs -> final_slugs.csv.
+[2026-10-28 15:49:35] USER: 18 company URLs (3M..american-airlines) - check whole dump overall + currently working jani logic.
+[2026-10-28 15:49:35] SYSTEM: 18-URL whole-dump check (355s) done -> scratchpad t2_check18_dump.log. Jani v2 current e.g. amazon 358,110 ever/110,931 v2; adidas 23,403/3,030; att 13,813/4,789; altimetrik 12,611/5,806; acl-digital 5,494/2,254.
+[2026-10-28 15:49:35] USER: those 596 companies - how many profiles, how many currently working?
+[2026-10-28 15:49:35] SYSTEM: Disk C: 125.4 GB free. Smoke LIMIT_FILES=2 pull OK (203,832 from 2 shards). Launched FULL Track2 pull_by_slug (2,061 slugs, 282 shards, 15 workers, resumable) -> Jani Capsight\Track2_BySlug_profiles\shards (32 orig cols) + _sidecars. Will report total distinct profiles + currently-working (Jani v2) when done.
+
+========================================================================
+[2026-10-28 18:41:38] SESSION LOG — Track-2 build + cross-track analysis (scripts, purpose, result)
+========================================================================
+SLUG CHECKS (whole passive_IN dump, 282 shards, 15 workers) — script JD\Unspecified\SlugCheck\scripts\slug_current_variants.py (ever/NORMAL present/JANI present+start-no-end/BROAD):
+  - 18 Track-2 cos (3M..american-airlines): amazon 358,110 ever/109,676 norm/110,931 jani; adidas 23,403/3,002/3,030; att 13,813/4,762/4,789; altimetrik 12,611/5,774/5,806; acl-digital 5,494/2,233/2,254; etc. (~355s)
+  - citi-india+virtusa: citi-india 19,426 ever/8,254 norm/8,291 jani; virtusa 49,496/17,434/17,541 (211s)
+  - all-34 sent URLs v2 run (649s) + 4.2M-set version via slug_current_variants_shards.py (169s)
+TRACK-2 PIPELINE (source Track2_Confirmed_GCC_Locations_pART 1.xlsx, 596 names / 595 norm; pools = both ziplabs_passive_IN_*):
+  [2026-10-28 18:41:38] resolve_entities.py — discover LinkedIn slugs per company from supply (name-match -> slug). 318s. 20,427 (target,slug) pairs -> track2_entity_review.csv
+  [2026-10-28 18:41:38] build_confirmed_slugs.py — auto-confirm dominant+same-domain. 570 confirmed / 24 flagged -> confirmed_slugs.csv, flagged_companies.csv
+  [2026-10-28 18:41:38] assemble_final_slugs.py — keep rule across ALL companies -> final_slugs.csv (594 companies / 2,069 slugs)
+  [2026-10-28 18:41:38] pull_by_slug.py — pull all profiles at confirmed slugs, 32 orig cols gzip shards. 262s. 3,661,493 distinct -> Jani Capsight\Track2_BySlug_profiles\shards + _sidecars
+  [2026-10-28 18:41:38] track2_current_total.py — overall: ever 3,661,488 / cur-normal 1,442,498 / cur-jani 1,453,000 (174s)
+  [2026-10-28 18:41:38] amazon_hub_headcount.py — Amazon current in Hyd/Mum/Chn/Blr/Pune/DelhiNCR/Coimbatore minus generic sales: jani 85,420 hub -> 81,939 final; normal 84,530 -> 81,066 (270s)
+  [2026-10-28 18:41:38] amazon_l3_hub.py — L3 breakdown of the 85,420 hub pool vs Amazon JSON targets (JSON moved to Downloads; L3 names reconciled via RENAME). 22.2% matched -> amazon_hub_l3_counts.csv (147s)
+CONSOLIDATION / RANKINGS (shared scripts in JD\_common\scripts):
+  [2026-10-28 18:41:38] entity_consolidate.py TRACK=track2 — max 3 pages/company. 592 co, 2,061 slugs -> 1,252 kept/809 archived (top3_slugs.csv, archived_slugs.csv). Recount: ever 3,582,618 / norm 1,412,130 / jani 1,422,446 (234s)
+  [2026-10-28 18:41:38] top_companies.py TRACK=track2 — per-company headcount -> top_companies.csv. #1 amazon 391,181 ever/120,462 jani (218s)
+  [2026-10-28 18:41:38] per_entity_current.py TRACK=track2 — per-entity cur-normal/cur-jani for top-3 pages -> top3_entity_current.csv (271s)
+  [2026-10-28 18:41:38] filter_connections.py TRACK=track2 MIN=10 (blanks removed) — 3,661,488 -> removed <10: 763,142; blank: 4,880; kept 2,893,466 -> Track2_BySlug_profiles\shards_min10conn (198s)
+CROSS-TRACK DELIVERABLE:
+  [2026-10-28 18:41:38] Track1_Track2_company_currently_working.csv (Jani Capsight) — 1,543 companies (951 T1 + 592 T2), ever + cur-normal + cur-jani, Sankalp excluded.
+NOTE: data-quality — acquisition/mislabel page inflation (Infinera->nokia, atos->cms-infosystems, virtusa->westen-tou vendor); see Track-1 log for Sankalp->hcltech root cause.
+[2026-10-28 22:04:29] DOCUMENTATION written: C:\Shree\Shreekanth-Hiresense\Jani Capsight\JANI_GCC_PIPELINE_DOCUMENTATION.md — authoritative full record of Track-1/Track-2/Track-2-Part-2 GCC pipeline (scripts, datasets, all curation rules, final numbers, gotchas). Read this first when reopening. Final counts: T1 2,797,023/1,517,960; T2 2,653,535/1,184,154; Part-2 1,237,980/498,767.
+[2026-10-28 22:30:45] MAX-3 ENTITY CAP applied to all 3 tracks (apply_top3_cap.py; top-3 pages/company by unique count, rest REMOVED not archived; exceptions KPMG/PwC/EY/Deloitte/Goldman/Amazon/DEShaw/PepsiCo/Mercedes/Bosch/Teleperformance/Siemens/Philips/NTT kept as-is). final_slugs backed up to final_slugs_precap_*.csv; shards_min20conn re-finalized. CAPPED counts: T1 ever 2,770,338/jani 1,507,329; T2 2,603,014/1,160,209; Part-2 India 1,184,276/current 477,175. Doc updated (section 8a).
+
+[2026-10-28 22:51:22] CALIBRATION CHECK (currently-working Jani, combined distinct across Track-1+Track-2+Part-2, dedup by uid).
+  Script: JD/_common/scripts/combined_current_by_city.py (847 shards: T1 min20conn 283 + T2 min20conn 282 + Part2 282; 10 workers; 345s). All per-track gates applied.
+  COMBINED currently-working distinct = 3,076,631 vs calibrated total 3,078,777 => 99.9% MATCH.
+  CITY (ours vs target, target Delhi-NCR=Delhi+Gurugram+Noida): Bengaluru 789,508/933,550 85%; Hyderabad 325,697/434,516 75%; Chennai 224,566/389,236 58%; Delhi-NCR 437,055/330,854 132%; Pune 314,284/311,227 101%; Mumbai-MMR 240,218/292,107 82%; Kolkata 42,306/41,192 103%; Ahmedabad 31,217/32,808 95%; Coimbatore 22,927/23,240 99%; Kochi 8,049/9,935 81%; Trivandrum 12,760/7,581 168%; Jaipur 15,975/6,525 245%; Indore 15,034/5,970 252%; Chandigarh 13,516/4,133 327%; Nagpur 8,715/2,978 293%; Visakhapatnam 5,440/2,846 191%; Mysuru 5,572/902 618%; unknown-city 559,649 (unallocated).
+  STATE: Karnataka 795,080/936,807 85%; Maharashtra 563,217/607,034 93%; Telangana 325,697/434,516 75%; Tamil Nadu 247,493/413,115 60%; Gujarat 31,217/43,095 72%; West Bengal 42,306/41,192 103%; Kerala 20,809/17,516 119%; Rajasthan 15,975/6,525 245%; MP 15,034/5,970 252%; AP 5,440/3,380 161%; Odisha 4,143/3,243 128%.
+  Verdict: grand total matches (99.9%); metros read UNDER mainly due to 559,649 unparseable-city profiles (unallocated); small cities read OVER because profile-city != GCC work-city. Full table: Jani Capsight/Calibration_match_city_state.csv.
+  L1/L2 sector tables: NOT yet matched - need company->sector classification from the user-provided definitions (next step). MATCHED metric = currently-working Jani.
+
+[2026-10-28 22:55:06] COMPANY COVERAGE audit. Analyzed(in final_slugs): Track-1 950/983, Track-2 593/595, Part-2 927/1047 (~2,470 slots, ~2,460 distinct).
+  NOT analyzed = 155 total = 14 excluded-on-purpose + 141 no-LinkedIn-page-found(name-match miss). Full list: Jani Capsight/NOT_analyzed_companies.csv (track,company,reason).
+  Excluded: T1 ION,IGT,ING,EQ,Azul,CR2,NBTC,GoTo,Sankalp; T2 Kyndryl; P2 IBM,HP,NTT,Bosch,People Tech (+5 Track1/2 overlaps).
+  NOTE: no-page-found = name-resolver miss, not necessarily absent. Many exist under a differently-named slug (LSEG=london-stock-exchange-group, Pinterest India=pinterest, Dentsu, Mitsubishi UFJ, Databricks, Atlassian, CrowdStrike, DocuSign, etc.) and can be added via URL like D.E.Shaw/Bosch. Part-2 no-page are mostly GCC-named sub-entities with no own page (people on parent page).
+  OPEN / TO CONTINUE LATER: (1) optionally auto-discover LinkedIn pages for the 141 no-page companies and add the real ones; (2) L1/L2 SECTOR classification (map each company to sector via user-provided canonical definitions) + compare to calibrated sector targets (currently-working Jani). City/State calibration already done (99.9% grand-total match).

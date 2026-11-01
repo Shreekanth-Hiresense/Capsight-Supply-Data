@@ -1,0 +1,105 @@
+================================================================================
+STEP 5 - QA SUMMARY: TARGET RECONCILIATION, CORRECTIONS, GAPS, UNRESOLVED, ASSUMPTIONS
+GCC validation project (Track-1 + Track-2 + Part-2)   |   generated 2026-10-30
+================================================================================
+Sources: Company_Master_List_industry.csv (validated industries), Company_Centre_Mapping.csv
+(centres), Calibration_match_GCCmaster.csv (reconciliation), gcc master list (2).xlsx (targets).
+"Currently working" = Jani logic (present OR start-and-no-end). conn>=20. Part-2 CURRENT restricted
+to the 11-function uid set (371,165). Targets = MINIMUM benchmarks (ours>=target = OK, no action).
+Distinct current uids across all tracks: 2,949,424.
+
+--------------------------------------------------------------------------------
+A. CORRECTIONS MADE (this validation pass vs the earlier keyword calibration)
+--------------------------------------------------------------------------------
+1. INDUSTRY CLASSIFICATION rebuilt from the GCC master list (reliable source), NOT name-keywords
+   and NOT the ziplabs companies dataset. 2,277 companies validated (2,214 by name, 63 by slug);
+   195 flagged NEEDS_REVIEW (not in the GCC master) - flagged, never guessed.
+   - Fixed slug-collision errors from the first attempt (slug-first matching): Amazon had matched
+     "Howmet Aerospace" (-> Industrial), HPE had matched "United Parcel Service" (-> Logistics),
+     EY had matched "Elevance Health" (-> Healthcare). Switched to NAME-first (slug fallback);
+     now Amazon/HPE/Google/Microsoft/Oracle = Software & Internet, IBM = Consulting,
+     JPMorgan/EY/Deloitte = BFSI, Cisco = Telecom & Media, Pfizer = Healthcare. 131 companies'
+     industries were corrected in the centre mapping after the fix.
+2. L1/L2 counts are now DISTINCT UIDs per category (a person at two BFSI companies counts once in
+   BFSI). No cross-company double-counting. City/State are also distinct-uid by the person's own
+   location. => the "no double-counting" requirement is met at every level.
+3. GCC-master L1 names match target L1 names exactly (13/13) and L2 exactly (26/26) -> industries
+   join the targets with zero remapping.
+4. LOCATION - Delhi-NCR kept GROUPED: reported as ONE city line vs the combined Gurugram+Noida+Delhi
+   target (330,854) and ONE state line "Delhi-NCR (grouped)". The old run triple-counted it
+   (Gurugram/Noida/Delhi each showed the full 415,882 = 1039%/508%/199%). Now 420,787 vs 330,854 = 127%.
+5. CITY COVERAGE expanded: 15 tier-2/3 target cities that canon_city had no alias for and was
+   dropping to blank (Vadodara, Panaji & Goa, Udupi & Manipal, Aurangabad, Madurai, Vijayawada,
+   Mangaluru, Lucknow, Shillong, Belagavi, Guwahati, Hubballi & Dharwad, Tumakuru, Shivamogga,
+   Karwar) are now mapped - all moved from 0% to real counts.
+6. Fixed the state label for Chandigarh (was "Chandigarh Tricity" -> now "Punjab / Haryana / UT"),
+   which had left that state target showing 0% when it is actually 13,141 (318%).
+
+--------------------------------------------------------------------------------
+B. GENUINE SHORTFALLS (ours < target) - ranked, with the likely cause
+--------------------------------------------------------------------------------
+INDUSTRY L1 (short):
+   Logistics & Supply Chain        19,147 / 38,235  (50%)  <- largely unclassified: Maersk(13,130)
+                                                             + DHL(3,303) sit in the 195 unclassified
+   Consulting & Prof. Services    205,470 / 291,430 (71%)  <- unclassified: EXL(24,914)+Teleperformance
+                                                             (24,495)+Virtusa(19,342)+CGI(19,095)+Randstad
+   Healthcare & Pharma            196,767 / 268,318 (73%)  <- + Part-2 11-fn restriction; AGS Health unclassified
+   Automotive & Mobility           85,154 / 105,814 (80%)  <- Chennai/Pune auto GCC coverage (see cities)
+   Industrial & Manufacturing     286,084 / 339,260 (84%)
+   Retail & Consumer              147,885 / 166,645 (89%)  <- Target(8,125) unclassified
+   (L2 mirrors these: Hospitals 45%, Medical Devices 52%, Specialty Chemicals 54%, Cloud/DevOps 59%,
+    Mgmt Consulting 67%, Industrial Automation 81%, Cybersecurity 82%, E-Commerce 83%, Biopharma 88%.)
+CITY / STATE (short):
+   Chennai        211,665 / 389,236 (54%)   |  Tamil Nadu 237,057 / 413,115 (57%)  <- biggest real gap
+   Hyderabad      322,488 / 434,516 (74%)   |  Telangana 322,488 / 434,516 (74%)
+   Mumbai MMR     229,405 / 292,107 (79%)   |  Maharashtra 545,016 / 607,034 (90%)
+   Bengaluru      754,914 / 933,550 (81%)   |  Karnataka 767,603 / 936,807 (82%)
+   Ahmedabad & GIFT City 29,268 / 32,808 (89%); Pune 98% & Coimbatore 92% (near)
+   Shillong 219/399 (55%), Karwar 81/119 (68%) - tiny benchmarks, immaterial.
+
+--------------------------------------------------------------------------------
+C. WHY THE SHORTFALLS - three drivers (so a shortfall is not read as "we can't source them")
+--------------------------------------------------------------------------------
+1. UNCLASSIFIED COMPANIES (classification gap, fixable): the 195 companies not found in the GCC
+   master hold 231,157 current profiles (5.2% of the per-company current sum) and count toward NO
+   L1/L2. Their top names are squarely in the short sectors (Maersk/DHL -> Logistics; EXL/
+   Teleperformance/Virtusa/CGI/Randstad -> Consulting; AGS Health -> Healthcare; Target -> Retail).
+   => Classifying these would lift exactly the short industries. They are FLAGGED, not guessed
+   (Companies_Needing_Industry_Review.csv, with LinkedIn URLs, in Downloads).
+2. PART-2 11-FUNCTION RESTRICTION (deliberate, per instruction): Part-2 companies' CURRENT is
+   limited to the 371,165 in-11-function uids. Part-2 skews to Consulting/Healthcare/Industrial,
+   so this intentionally depresses those industry totals vs an unrestricted benchmark. Not an error.
+3. CONNECTION FILTER conn>=20: uniform suppression across all buckets; minor, applied for quality.
+   After 1-3, Chennai/Tamil Nadu (54-57%) remains the clearest SOURCING-side gap -> likely under-
+   coverage of Chennai-centred GCCs (auto OEMs, manufacturing, healthcare). Worth a targeted add.
+
+--------------------------------------------------------------------------------
+D. UNRESOLVED CASES (awaiting input)
+--------------------------------------------------------------------------------
+- 195 companies with no GCC-master industry -> Companies_Needing_Industry_Review.csv (Downloads,
+  with LinkedIn URLs). Option: user fills, OR approve mapping the well-known ones from reliable
+  knowledge (most are obvious: Maersk/DHL=Logistics, EXL/Teleperformance/Virtusa/CGI=Consulting,
+  Target=Retail, AGS Health=Healthcare).
+- 19 still-missing companies (no working India URL / URL returned 0 profiles) -> Still_Missing_
+  Companies.xlsx (Downloads), with their track noted. Awaiting working URLs.
+- 472,008 current uids (16.0%) whose own location is outside the 34 benchmark cities ("unresolved
+  own city"). Expected for an India-wide pool; not counted against any city target. Not a gap.
+
+--------------------------------------------------------------------------------
+E. ASSUMPTIONS REQUIRING VALIDATION
+--------------------------------------------------------------------------------
+1. Comparability: "ours" = distinct people CURRENTLY at a target company whose OWN profile location
+   is city X. The GCC-master target is headcount at the company's GCC CENTRE in city X. These are
+   close but not identical (a person may live in the city yet not be posted to that company's centre,
+   or vice-versa). Treat ratios as directional, not exact.
+2. Delhi-NCR grouping: Gurugram+Noida+Delhi folded into one city line and one state line, per the
+   standing rule. Lucknow is kept separate under Uttar Pradesh (UP target reduced to its non-Noida
+   remainder, 470). Haryana and NCT-of-Delhi state rows are folded into "Delhi-NCR (grouped)".
+3. Targets are MINIMUM benchmarks: buckets at >=100% (BFSI 123%, Software 106%, Telecom 142%, many
+   small cities) are reported OK with no action; being over target is expected and not inflated -
+   counts are distinct-uid, so there is no double-counting producing the overage.
+4. Part-2 current = 11 functions only (standing instruction); overall/ever counts are NOT function-
+   filtered. Changing either choice would move the industry and city numbers.
+5. Industry for the 195 unclassified companies is BLANK by design (flagged), so current industry
+   totals are a floor; they will rise once those are classified.
+================================================================================

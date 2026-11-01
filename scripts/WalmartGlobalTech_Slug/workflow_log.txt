@@ -1,0 +1,7 @@
+[2026-10-28] TASK: Walmart Global Tech slug check (Jani). URLs given: linkedin.com/company/walmartglobaltech, linkedin.com/company/walmartglobaltechindia.
+SCRIPTS (JD/Unspecified/WalmartGlobalTech_Slug/scripts/):
+ - wgt_slug_check.py      : search the 48 GCC_9M_shards; match experience company by SLUG (lnkd_uid or /company/<slug> in lnkd_url1/url2); current(duration.present) vs past; dedup uid. cmd: `python wgt_slug_check.py` (15 workers, read-only).
+ - wgt_slug_check_dump.py : same, over WHOLE passive_IN dump (both ziplabs_passive_IN_* folders, 282 shards, orjson). cmd: `python wgt_slug_check_dump.py`.
+RESULTS:
+ - 9M shards (67s): walmartglobaltech 4,546 distinct (2,089 current / 2,457 past); walmartglobaltechindia 16,730 (9,107/7,623); COMBINED distinct 20,800 (11,139 current / 9,661 past).
+ - WHOLE dump (53s): walmartglobaltech 4,547 (2,090/2,457); walmartglobaltechindia 16,777 (9,112/7,665); COMBINED 20,848 (11,145/9,703). ~+48 vs 9M => essentially all WGT profiles already in the 9M GCC set.

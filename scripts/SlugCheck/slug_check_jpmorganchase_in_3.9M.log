@@ -1,0 +1,8 @@
+slugs=['jpmorganchase']  shards=282 in C:\Shree\Shreekanth-Hiresense\Jani Capsight\Track1_Companies_profiles\shards  workers=15
+
+==== SLUG CHECK on shards  (48s) ====
+
+  jpmorganchase:  PRESENT
+    distinct profiles (ever worked) : 75,944
+    currently working               : 36,340
+    worked in the past (not current): 39,604
